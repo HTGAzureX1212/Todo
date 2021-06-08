@@ -1,18 +1,18 @@
 // Todo app main
-use	std::collections::HashMap;
-use	std::io::Read;
-use	std::str::FromStr;
+use std::collections::HashMap;
+use std::io::Read;
+use std::str::FromStr;
 
 fn main() {
-	let	action = std::env::args().nth(1).expect("Please	specify	an action");
-	let	item = std::env::args().nth(2).expect("Please specify an item");
+	let action = std::env::args().nth(1).expect("Please	specify	an action");
+	let item = std::env::args().nth(2).expect("Please specify an item");
 
-	let	mut	todo = Todo::new().expect("Initialisation of db	failed");
+	let mut	todo = Todo::new().expect("Initialisation of db	failed");
 
 	if action == "add" {
-		todo.insert(item);
-		match todo.save() {
-			Ok(_) => println!("todo	saved"),
+	    todo.insert(item);
+	    match todo.save() {
+		Ok(_) => println!("todo	saved"),
 			Err(why) =>	println!("An error occurred: {}", why),
 		}
 	} else if action == "finish" {
