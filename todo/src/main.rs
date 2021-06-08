@@ -1,7 +1,6 @@
-// Todo app
-use std::collections::HashMap;
-use std::io::Read;
-use std::str::FromStr;
+use	std::collections::HashMap;
+use	std::io::Read;
+use	std::str::FromStr;
 
 fn main() {
 	let action = std::env::args().nth(1).expect("Please	specify	an action");
