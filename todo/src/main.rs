@@ -27,7 +27,7 @@ fn main() {
 	}
 }
 
-struct Todo	{
+struct Todo {
 	// use rust built in HashMap to	store key - val	pairs
 	map: HashMap<String, bool>,
 }
