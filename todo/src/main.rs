@@ -1,4 +1,4 @@
-// Todo app main
+// Todo app
 use std::collections::HashMap;
 use std::io::Read;
 use std::str::FromStr;
