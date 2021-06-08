@@ -1,0 +1,3 @@
+Ok	false
+Byecat db.txt 	true
+LOL	true
