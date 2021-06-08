@@ -11,11 +11,13 @@ fn main() {
 
 	if action == "add" {
 	    todo.insert(item);
+	
 	    match todo.save() {
-		Ok(_) => println!("todo	saved"),
-			Err(why) =>	println!("An error occurred: {}", why),
-		}
-	} else if action == "finish" {
+		    Ok(_) => println!("todo	saved"),
+		    Err(why) => println!("An error occurred: {}", why),
+	    }
+	} 
+    else if action == "finish" {
 		match todo.finish(&item) {
 			None => println!("'{}' not present in list", item),
 			Some(_) => match todo.save() {
